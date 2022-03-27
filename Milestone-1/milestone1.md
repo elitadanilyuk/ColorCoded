@@ -44,12 +44,12 @@
            - [ ] 2. orange
            - [ ] 3. yellow
            - [ ] 4. green
-           - [ ] 5. blue
-           - [ ] 6. purple
-           - [ ] 7. grey
+           - [ ] 5. teal
+           - [ ] 6. blue
+           - [ ] 7. purple
            - [ ] 8. brown
-           - [ ] 9. black
-           - [ ] 10. teal
+           - [ ] 9. grey
+           - [ ] 10. black
          - [ ] No two drop-downs can select the same color at the same time. If this happens:
            - [ ] revert the most recently changed drop-down to the previous value selected
            - [ ] inform the user in a non-intrusive way (ie not an `alert()`)
