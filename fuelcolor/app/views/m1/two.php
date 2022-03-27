@@ -18,9 +18,53 @@
                         <input type="number" id="colors" name="colors" placeholder="Input" min="1" max="10" title="Must be between 1 and 10" required>
                     </p>
                     <input type="submit">
-
                 </form>
-               
+                <?php
+	                $crtable = '';
+	                if (isset($_GET['colors'])){
+		                $crtable .= '<table border="1">';
+		                for ($i = 0; $i < $_GET['colors']; $i++) {
+			                $crtable .= '<tr>';
+			                for ($j = 0; $j < 2; $j++) {
+				                $crtable .= '<td width="50">&nbsp;</td>';
+			                }
+			                $crtable .= '</tr>';
+		                }
+		                $crtable .= '</table>';
+	                }
+                ?>
+                <br/>
+                <br/>
+
+                <?php
+	               echo $crtable;
+                ?>
+
+                <?php
+                    $alphabet = range('A', 'Z');
+	                $crtable = '';
+	                if (isset($_GET['num'])){ 
+		                $crtable .= '<table border="1">';
+		                for ($i = 0; $i < $_GET['num']+1; $i++) {
+			                $crtable .= '<tr>';
+                            //$crtable .= $alphabet[$i];
+			                for ($j = 0; $j < $_GET['num']+1; $j++) {
+                                $crtable .= '<td width="50">&nbsp;</td>';
+                                // if($i == 0){
+                                //     $crtable[$j]= '<td>'.$alphabet[$j].'</td>';
+                                // }
+                            }
+                            $crtable .= '</tr>';
+                        }
+	                }
+                ?>
+                <br/>
+                <br/>
+
+                <?php
+	               echo $crtable;
+                ?>
+                
             </div>
         </main>
     </body>
