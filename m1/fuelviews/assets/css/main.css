@@ -1,0 +1,42 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-area {
+    resize: none;
+    height: 200px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.log {
+    /* position: absolute;
+    left: 20;
+    top: 20; */
+    float:left;
+    clear: center;
+    width: 200px;
+    height: 75px;
+    padding: 10px
+}
+
+.background-failure {
+    background-color: salmon;
+}
+
+.background-success {
+    background-color: green;
+}
