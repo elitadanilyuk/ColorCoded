@@ -15,3 +15,5 @@ ERROR - 2022-03-27 14:17:22 --> Notice - Undefined property: Controller_cc::$loa
 ERROR - 2022-03-27 14:17:33 --> Notice - Undefined property: Controller_cc::$load in /s/bach/d/under/grfuller/fuelcolor/app/classes/controller/cc.php on line 53
 ERROR - 2022-03-27 14:17:48 --> Notice - Undefined variable: row_col_num in /s/bach/d/under/grfuller/fuelcolor/app/views/template.php on line 23
 ERROR - 2022-03-27 14:18:16 --> Notice - Undefined variable: row_col_num in /s/bach/d/under/grfuller/fuelcolor/app/views/template.php on line 23
+ERROR - 2022-03-27 14:44:43 --> Notice - Undefined variable: row_col_num in /s/bach/m/under/mayavit/local_html/ColorCoded/fuelcolor/app/views/template.php on line 23
+ERROR - 2022-03-27 14:45:35 --> Notice - Undefined variable: row_col_num in /s/bach/m/under/mayavit/local_html/ColorCoded/fuelcolor/app/views/template.php on line 23

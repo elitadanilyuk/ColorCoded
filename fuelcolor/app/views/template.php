@@ -11,16 +11,15 @@
         <h1> <?php echo $title; ?> </h1>
         <div class="navbar">
             <ul class="navbar">
-                    <li><?php echo "<a href= 'https://cs.colostate.edu:4444/~grfuller/m1/index.php/cc/index'>Home</a>" ?></li>
-                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~grfuller/m1/index.php/cc/one'>About Us</a>" ?></li>
-                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~grfuller/m1/index.php/cc/two'>Color Coordinate Generator</a>" ?></li>
+                    <li><?php echo "<a href= 'https://cs.colostate.edu:4444/~mayavit/ColorCoded/m1/index.php/cc/index'>Home</a>" ?></li>
+                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~mayavit/ColorCoded/m1/index.php/cc/one'>About Us</a>" ?></li>
+                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~mayavit/ColorCoded/m1/index.php/cc/two'>Color Coordinate Generator</a>" ?></li>
             </ul>
         </div>
     </header>
     <main>
         <div id="content">
             <?php echo $content; ?>
-            <?php echo $row_col_num; ?>
         </div>
     </main>
     <footer>

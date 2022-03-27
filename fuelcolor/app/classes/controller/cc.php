@@ -49,13 +49,11 @@ class Controller_cc extends Controller_Template
 				echo ("You entered: " . $color_num);
 			}
 		}
-
-		$this->load->library('table');
 		
 
 
 		
-		//$this->template->row_col_num = $row_col_num;
-		//$this->template->color_num = $color_num;
+		$this->template->row_col_num = $row_col_num;
+		$this->template->color_num = $color_num;
 	}
 }
