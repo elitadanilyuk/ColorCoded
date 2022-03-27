@@ -1,0 +1,68 @@
+.main{
+  
+}
+
+.navbar ul{
+  background-color: #77976F;
+  font-family: Arial, Helvetica, serif;
+  color: #141259;
+  font-size: large;
+	border-radius: 10px;
+	padding-top: 0px;
+  padding-bottom: 0px;
+	width: 100%;
+  list-style-type: none;
+  text-align: center;
+  overflow: hidden;
+}
+
+.navbar li{
+  color: #141259;
+	padding: 40px 40px;
+	text-decoration: none;
+  display: inline-block;
+}
+.nav li:hover{
+  background-color: #82e267;
+}
+
+li{
+
+}
+
+.contents {
+
+}
+
+a:hover{
+
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-color: #7095C8;
+}
+
+footer{
+
+}
+
+p{
+}
+
+figcaption{
+}
+
+img{
+}
+
+figcaption{
+
+}
+
+q.on-hover[cite]:hover::after {
+  
+}
