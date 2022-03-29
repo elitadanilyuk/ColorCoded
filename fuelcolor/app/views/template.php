@@ -3,11 +3,12 @@
     <meta charset="UTF-8"></meta>
     <meta name="author" content="Grace Fuller, Abby Williams, Maya Vitrano, Elita Danilyuk"></meta>
     <meta name="description" content="Milestone 1 Webpage"></meta>
-    <link rel="icon" href="../../m1/assets/img/company_small_icon.png"> <!-- FIX THIS-->
+    <link rel="icon" href="../../../m1/assets/img/company_small_icon.png">
     <?php echo Asset::css("M1.css"); ?>
 </head>
 <body>
     <header>
+        <img src="../../../m1/assets/img/company_logo.png" alt="Color coded company logo.">
         <h1> <?php echo $title; ?> </h1>
         <div class="navbar">
             <ul class="navbar">
