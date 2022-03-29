@@ -17,3 +17,5 @@ ERROR - 2022-03-27 14:17:48 --> Notice - Undefined variable: row_col_num in /s/b
 ERROR - 2022-03-27 14:18:16 --> Notice - Undefined variable: row_col_num in /s/bach/d/under/grfuller/fuelcolor/app/views/template.php on line 23
 ERROR - 2022-03-27 14:44:43 --> Notice - Undefined variable: row_col_num in /s/bach/m/under/mayavit/local_html/ColorCoded/fuelcolor/app/views/template.php on line 23
 ERROR - 2022-03-27 14:45:35 --> Notice - Undefined variable: row_col_num in /s/bach/m/under/mayavit/local_html/ColorCoded/fuelcolor/app/views/template.php on line 23
+ERROR - 2022-03-27 17:40:01 --> Error - Could not find asset: ../../../m1/assets/img/company_small_icon.png in /s/bach/j/under/elita/local_html/ColorCoded/fuelcolor/core/classes/asset/instance.php on line 413
+ERROR - 2022-03-27 17:40:14 --> Error - Could not find asset: ../../../m1/assets/img/company_small_icon.png in /s/bach/j/under/elita/local_html/ColorCoded/fuelcolor/core/classes/asset/instance.php on line 413
