@@ -6,7 +6,10 @@
 }
 
 .page-header {
+  margin-top: 50px;
   text-align: center;
+  font-size: 45px;
+  color: rgb(61, 61, 61);
 }
 
 .navbar {
