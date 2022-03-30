@@ -125,11 +125,11 @@
   box-sizing: border-box;
   flex-direction: row;
   justify-content: center;
-
+  margin-bottom: 40px;
 }
 
 .member-card {
-  background-color: rgb(184, 184, 184);
+  background-color: #afb8c2;
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -148,6 +148,7 @@
 
 body{
   background-color: #7095C8;
+  margin: 0px;
 }
 
 footer {
@@ -155,6 +156,18 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  color: black;
+  color: white;
   text-align: center;
+  background-color: var(--cc-grey);
+  line-height: 30px;
+}
+
+footer p {
+  font-size: small;
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+footer img {
+  vertical-align: middle;
 }
