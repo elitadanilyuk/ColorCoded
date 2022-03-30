@@ -89,9 +89,23 @@
   padding-right: 0px;
 }
 
+.member-img {
+  position: relative;
+  top: -50px;
+}
 
 .member-name {
   margin-bottom: 0px;
+  font-family: sans-serif;
+  position: relative;
+  top: -50px;
+}
+
+.bio {
+  font-family: sans-serif;
+  position: relative;
+  top: -25px;
+  margin: 0px 20px;
 }
 
 .member-bios {
@@ -109,6 +123,7 @@
 }
 
 .member-card {
+  background-color: rgb(184, 184, 184);
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -120,7 +135,7 @@
   width: calc(100% / 2.5);
   margin: 10px;
   border: 1px solid #000;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 
