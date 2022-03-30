@@ -89,6 +89,13 @@
   padding-right: 0px;
 }
 
+
+.home-content {
+  margin: 40px;
+  text-align: center;
+}
+
+
 .member-img {
   position: relative;
   top: -50px;
@@ -147,7 +154,7 @@
 
 
 body{
-  background-color: #7095C8;
+  background-color: #94abca;
   margin: 0px;
 }
 
