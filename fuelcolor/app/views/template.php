@@ -8,15 +8,17 @@
 </head>
 <body>
     <header>
-        <img src="../../../m1/assets/img/company_logo.jpg" alt="color coded company logo" style="max-height:100px;">
-        <h1> <?php echo $title; ?> </h1>
-        <div class="navbar">
-            <ul class="navbar">
-                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~mayavit/ColorCoded/m1/index.php/cc/index'>Home</a>" ?></li>
-                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~mayavit/ColorCoded/m1/index.php/cc/about'>About Us</a>" ?></li>
-                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~mayavit/ColorCoded/m1/index.php/cc/colorGenerator'>Color Coordinate Generator</a>" ?></li>
+        <div class="navbar container">
+            <img class="left-container" src="../../../m1/assets/img/company_logo.jpg" alt="color coded company logo" style="max-height:100px;">
+            <ul class="navbar nav-right">
+                <div class="right-container">
+                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~elita/ColorCoded/m1/index.php/cc/index'>Home</a>" ?></li>
+                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~elita/ColorCoded/m1/index.php/cc/about'>About Us</a>" ?></li>
+                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~elita/ColorCoded/m1/index.php/cc/colorGenerator'>Color Coordinate Generator</a>" ?></li>
+                </div>
             </ul>
         </div>
+        <h1> <?php echo $title; ?> </h1>
     </header>
     <main>
         <div id="content">
