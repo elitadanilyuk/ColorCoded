@@ -18,7 +18,7 @@
                 </div>
             </ul>
         </div>
-        <h1> <?php echo $title; ?> </h1>
+        <h1 class="page-header"> <?php echo $title; ?> </h1>
     </header>
     <main>
         <div id="content">

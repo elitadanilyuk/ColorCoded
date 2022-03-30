@@ -24,7 +24,7 @@ class Controller_cc extends Controller_Template
 
 	public function action_about(){
 		$data = array();
-		$this->template->title= "About Us Page";
+		$this->template->title= "About Us";
 		$this->template->content= View::forge('m1/about.php', $data);
 		$this->template->css= Asset::css("M1.css");
 	}
