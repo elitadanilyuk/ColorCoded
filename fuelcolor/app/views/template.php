@@ -12,9 +12,9 @@
             <img class="left-container" src="../../../m1/assets/img/company_logo.jpg" alt="color coded company logo" style="max-height:100px;">
             <ul class="navbar nav-right">
                 <div class="right-container">
-                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~elita/ColorCoded/m1/index.php/cc/index'>Home</a>" ?></li>
-                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~elita/ColorCoded/m1/index.php/cc/about'>About Us</a>" ?></li>
-                    <li><?php echo "<a href='https://cs.colostate.edu:4444/~elita/ColorCoded/m1/index.php/cc/colorGenerator'>Color Coordinate Generator</a>" ?></li>
+                    <li><?php echo "<a href='index'>Home</a>" ?></li>
+                    <li><?php echo "<a href='about'>About Us</a>" ?></li>
+                    <li><?php echo "<a href='colorGenerator'>Color Coordinate Generator</a>" ?></li>
                 </div>
             </ul>
         </div>
