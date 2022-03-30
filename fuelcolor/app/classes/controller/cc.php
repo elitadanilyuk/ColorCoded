@@ -17,7 +17,7 @@ class Controller_cc extends Controller_Template
 
 	public function action_index(){
 		$data = array();
-		$this->template->title= "Home Page";
+		$this->template->title= "Welcome to ColorCoded!";
 		$this->template->content= View::forge('m1/index.php', $data);
 		$this->template->css= Asset::css("M1.css");
 	}
