@@ -6,7 +6,7 @@
     <body>
         <main class="main">
             <div class="contents">
-                <form action="two" target="" method="GET">
+                <form action="colorGenerator" target="" method="GET">
                     <p>
                         <label for="num"><b>Number of Rows/Columns:</b></label>
                         <input type="number" id="num" name ="num" placeholder="Input" min="1" max="26" title="Must be between 1 and 26" required>
