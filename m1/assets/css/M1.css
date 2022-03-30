@@ -5,8 +5,8 @@
   --cc-grey: #636363;
 }
 
-.main{
-  
+.page-header {
+  text-align: center;
 }
 
 .navbar {
@@ -41,12 +41,13 @@
 }
 
 .navbar li:hover {
-    background-color: var(--cc-green);
+  background-color: var(--cc-green);
   padding: 40px 20px;
 }
 
 .navbar li a {
   color: var(--cc-blue);
+  text-decoration: none;
 }
 
 .container {
@@ -88,43 +89,72 @@
   padding-right: 0px;
 }
 
-li{
+.member-img {
+  position: relative;
+  top: -50px;
+}
+
+.member-name {
+  margin-bottom: 0px;
+  font-family: sans-serif;
+  position: relative;
+  top: -50px;
+}
+
+.bio {
+  font-family: sans-serif;
+  position: relative;
+  top: -25px;
+  margin: 0px 20px;
+}
+
+.fun-fact {
+  font-family: sans-serif;
+  font-size: 14px;
+  bottom: 0px;
+}
+
+.member-bios {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
 
 }
 
-.contents li {
-  text-decoration: none;
+.member-card {
+  background-color: rgb(184, 184, 184);
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 2.5);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
 }
 
-a:hover{
 
-}
-
-a{
-  text-decoration: none;
-}
 
 body{
   background-color: #7095C8;
 }
 
-footer{
-
-}
-
-p{
-}
-
-figcaption{
-}
-
-img{
-}
-
-figcaption{
-
-}
-
-q.on-hover[cite]:hover::after {
-  
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
 }
