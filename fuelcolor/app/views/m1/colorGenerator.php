@@ -5,10 +5,8 @@
 
     <body>
         <main class="main">
-            <header>
-            </header>
             <div class="contents">
-                <form action="https://cs.colostate.edu:4444/~absarah/ColorCoded/m1/index.php/cc/print" target="" method="GET">
+                <form action="two" target="" method="GET">
                     <p>
                         <label for="num"><b>Number of Rows/Columns:</b></label>
                         <input type="number" id="num" name ="num" placeholder="Input" min="1" max="26" title="Must be between 1 and 26" required>
@@ -17,44 +15,72 @@
                         <label for="colors"><b>Number of Colors:</b></label>
                         <input type="number" id="colors" name="colors" placeholder="Input" min="1" max="10" title="Must be between 1 and 10" required>
                     </p>
-                    <input type="submit" id="enter" name="enter">
+                    <input type="submit">
                 </form>
+
                 <?php
-	                $crtable = '';
+	                $table = '';
+                    $color_choices = array('red', 'orange', 'yellow', 'green', 'blue', 'purple', 'grey', 'brown', 'black', 'teal');
 	                if (isset($_GET['colors'])){
-		                $crtable .= '<table border="1">';
-		                for ($i = 0; $i < $_GET['colors']; $i++) {
-			                $crtable .= '<tr>';
-			                for ($j = 0; $j < 2; $j++) {
-				                $crtable .= '<td width="50">&nbsp;</td>';
-			                }
-			                $crtable .= '</tr>';
-		                }
-		                $crtable .= '</table>';
+                            $table .= '<table border="2">';
+                            for ($i = 0; $i < $_GET['colors']; $i++) {
+                                $table .= '<tr>';
+                                for ($j = 0; $j < 2; $j++) {
+                                    if($j % 2 == 0){
+                                        $table .= '<td width="20%"><select class="color_picker" name="color_picker" id="color_picker">
+                                        <option value="blank"> </option>
+                                        <option value="red" style="background-color: red;">Red</option>
+                                        <option value="orange" style="background-color: orange;">Orange</option>
+                                        <option value="yellow" style="background-color: yellow;">Yellow</option>
+                                        <option value="green" style="background-color: green;">Green</option>
+                                        <option value="blue" style="background-color: blue;">Blue</option>
+                                        <option value="purple" style="background-color: purple;">Purple</option>
+                                        <option value="grey" style="background-color: grey;">Grey</option>
+                                        <option value="brown" style="background-color: brown;">Brown</option>
+                                        <option value="black" style="background-color: black;">Black</option>
+                                        <option value="teal" style="background-color: teal;">Teal</option>
+                                        </select></td>';
+                                    }
+                                    else{
+                                        $table .= '<td width="80%">&nbsp;</td>';
+                                    }
+                                    
+                                }
+                                $table .= '</tr>';
+                            }
+                            $table .= '</table>';
 	                }
                 ?>
                 <br/>
                 <br/>
 
                 <?php
-	               echo $crtable;
+	               echo $table;
                 ?>
-
+                
                 <?php
                     $alphabet = range('A', 'Z');
-	                $crtable = '';
+                    $numbers = range(1,26);
+	                $table = '';
 	                if (isset($_GET['num'])){ 
-		                $crtable .= '<table border="1">';
+		                $table .= '<table border="2">';
 		                for ($i = 0; $i < $_GET['num']+1; $i++) {
-			                $crtable .= '<tr>';
-                            //$crtable .= $alphabet[$i];
+			                $table .= '<tr>';
 			                for ($j = 0; $j < $_GET['num']+1; $j++) {
-                                $crtable .= '<td width="50">&nbsp;</td>';
-                                // if($i == 0){
-                                //     $crtable[$j]= '<td>'.$alphabet[$j].'</td>';
-                                // }
+                                if($i ==0 and $j == 0){
+                                    $table .= '<td width="50">&nbsp;</td>';
+                                }
+                                else if($i == 0){
+                                    $table .= '<td>'.$alphabet[$j - 1].'</td>';
+                                }
+                                else if($j==0){
+                                    $table .= '<td>'.$numbers[$i-1].'</td>';
+                                }
+                                else{
+                                    $table .= '<td width="50">&nbsp;</td>';
+                                }
                             }
-                            $crtable .= '</tr>';
+                            $table .= '</tr>';
                         }
 	                }
                 ?>
@@ -62,14 +88,12 @@
                 <br/>
 
                 <?php
-	               echo $crtable;
+	               echo $table;
                 ?>
                 
             </div>
         </main>
     </body>
 
-    <footer>
-    </footer>
-
 </html>
+

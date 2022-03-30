@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
     <?php echo Asset::css("M1.css");?>
+    <link rel="icon" href="../../../m1/assets/img/company_small_icon.png">
     </head>
 
     <script>
@@ -68,12 +69,8 @@
 		                $crtable .= '<table border="1">';
 		                for ($i = 0; $i < $_GET['num']+1; $i++) {
 			                $crtable .= '<tr>';
-                            //$crtable .= $alphabet[$i];
 			                for ($j = 0; $j < $_GET['num']+1; $j++) {
                                 $crtable .= '<td width="50">&nbsp;</td>';
-                                // if($i == 0){
-                                //     $crtable[$j]= '<td>'.$alphabet[$j].'</td>';
-                                // }
                             }
                             $crtable .= '</tr>';
                         }
