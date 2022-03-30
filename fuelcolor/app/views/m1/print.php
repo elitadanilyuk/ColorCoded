@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <?php echo Asset::css("M1.css");?>
     </head>
+
+    <script>
+        function printDiv(colorTable, alphTable, companyLogo, button) {
+            var printContents = document.getElementById(companyLogo).innerHTML;
+            printContents += document.getElementById(colorTable).innerHTML;
+            //window.print(document.getElementById(alphTable).innerHTML);
+            printContents += document.getElementById(alphTable).innerHTML;           
+
+            w = window.open();
+            w.document.write(printContents);
+            w.print();
+            w.close();
+        }
+    </script>
 
     <body>
         <main class="main">
             <header>
+                <?php
+                    $logo = "<img src='../../../m1/assets/img/company_logo.jpg' alt='color coded company logo' style='max-height:100px;'>";
+                    echo "<div id='logo'>$logo</div>";
+                ?>
+                <h1> <?php echo $title; ?> </h1>
+                <hr>
             </header>
             <div class="contents">
                 <form action="https://cs.colostate.edu:4444/~absarah/ColorCoded/m1/index.php/cc/print" target="" method="GET">
@@ -37,7 +58,7 @@
                 <br/>
 
                 <?php
-	               echo $crtable;
+	               echo "<div id='colorTable'>$crtable</div>";
                 ?>
 
                 <?php
@@ -62,14 +83,28 @@
                 <br/>
 
                 <?php
-	               echo $crtable;
+	               echo "<div id='alphTable'>$crtable</div>";
                 ?>
-                
+
             </div>
+            
         </main>
     </body>
 
     <footer>
+        
+        
+        <div id="print-button">
+            <form>
+                <input type="button" onClick="printDiv('colorTable', 'alphTable', 'logo', 'print-button')" value="Print" class="printable">
+            </form>
+        </div>            
+
+        <!-- <div id="print-button">
+            <form>
+                <input type="button" onClick="printDiv('colorTable', 'alphTable')" value="Print">
+            </form>
+        <div>             -->
     </footer>
 
 </html>

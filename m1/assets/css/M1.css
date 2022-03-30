@@ -11,7 +11,7 @@
   font-size: 45px;
   color: rgb(61, 61, 61);
 }
-
+  
 .navbar {
   background-color: white;
   font-family: Arial, Helvetica, serif;
@@ -22,7 +22,6 @@
   overflow: hidden;
   align-items: center;
   margin: 0px;
-
   display: flex;
 	flex-flow: row nowrap;
 	justify-content: right;
@@ -176,6 +175,24 @@ footer p {
   font-size: small;
   font-family: sans-serif;
   margin: 0px;
+}
+
+.printable:hover {
+  background-color: var(--cc-green);
+  color: white;
+}
+
+.printable {
+  background-color: white;
+  color: var(--cc-blue); 
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+#print-button {
+  position: fixed;
+  bottom: -4px;
+  right: 3px;
 }
 
 footer img {
