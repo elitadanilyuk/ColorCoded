@@ -27,6 +27,6 @@
     </main>
     <footer>
         <meta http-equiv=”last-modified” content=<span id='date-time'></sp``an>
-        <p><img src="../../../m1/assets/img/company_large_icon.png" alt="color coded icon" style="max-height:20px"> &copy; 2022 - Grace Fuller, Abby Williams, Maya Vitrano, Elita Danilyuk</p>
+        <p><img src="../../../m1/assets/img/company_large_icon.png" alt="color coded icon" style="max-height:20px"> Grace Fuller, Abby Williams, Maya Vitrano, Elita Danilyuk &copy; 2022 ColorCoded</p>
     </footer>
 </body>
