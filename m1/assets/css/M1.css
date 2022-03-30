@@ -2,6 +2,13 @@
   
 }
 
+* {
+  --cc-red: #cd4242;
+  --cc-green: #6e986b;
+  --cc-blue: #6596cd;
+  --cc-grey: #636363;
+}
+
 .navbar ul{
   background-color: #77976F;
   font-family: Arial, Helvetica, serif;
@@ -65,4 +72,22 @@ figcaption{
 
 q.on-hover[cite]:hover::after {
   
+}
+
+.printable:hover {
+  background-color: var(--cc-green);
+  color: white;
+}
+
+.printable {
+  background-color: white;
+  color: var(--cc-blue); 
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+#print-button {
+  position: fixed;
+  bottom: -4px;
+  right: 3px;
 }
