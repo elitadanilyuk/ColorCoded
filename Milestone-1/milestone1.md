@@ -2,16 +2,16 @@
 
 ## Pages
 - [ ] Home
-  - [ ] Modern Design
+  - [x] Modern Design
   - [ ] Basic welcome information
-  - [ ] Useful links to get to the other pages on the site
-    - [ ] Home
-    - [ ] About
-    - [ ] Color Coordinator
-- [ ] About
-  - [ ] Team member names
-  - [ ] Brief biography of each team member
-  - [ ] Picture or avatar for each team member
+  - [x] Useful links to get to the other pages on the site
+    - [x] Home
+    - [x] About
+    - [x] Color Coordinator
+- [x] About
+  - [x] Team member names
+  - [x] Brief biography of each team member
+  - [x] Picture or avatar for each team member
 - [ ] Color Coordinator
   - [ ] See Requirements below
 
@@ -97,8 +97,8 @@
         - [ ] `any assets used`
 
 ### Grading Breakdown
-- [ ] Home Page as specified, site uses Fuel framework and templates (10 points)
-- [ ] Member Biographies (10 points)
+- [x] Home Page as specified, site uses Fuel framework and templates (10 points)
+- [x] Member Biographies (10 points)
 - [ ] Color coordinate page uses GET/POST paradigm (10 points)
 - [ ] Parameters passed as controller parameters (10 points)
 - [ ] Parameter Validation (10 points)
