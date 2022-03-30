@@ -18,7 +18,7 @@
                     <li class="member-card">
                         <img class="member-img" src="../../../m1/assets/img/elita.png" alt="">
                         <h2 class="member-name">Elita Danilyuk</h2>
-                        <p class="bio">I am a Junior majoring in Computer Science with a concentration in software engineering. I survive off lattes and obscene amounts of quotes from <i>The Office</i>.</p>
+                        <p class="bio">I am a Junior majoring in Computer Science with a concentration in software engineering. I survive off lattes and an obscene amount of quotes from <i>The Office</i>.</p>
                         <p class="fun-fact">Fun fact: I have made six wedding cakes (one being my own).</p>
                     </li>
                     <li class="member-card">
@@ -30,7 +30,7 @@
                     <li class="member-card">
                         <img class="member-img" src="../../../m1/assets/img/maya.png" alt="">
                         <h2 class="member-name">Maya Vitrano</h2>
-                        <p class="bio">I am a Senior majoring in Computer Science. Nothing motivates me more than a gloomy rainy day while watching <i>Adventure Time</i> with a nice cup of matcha latte in hand.</p>
+                        <p class="bio">I am a Senior majoring in Computer Science. Nothing motivates me more than a rainy day while watching <i>Adventure Time</i> with a nice cup of matcha latte in hand.</p>
                         <p class="fun-fact">Fun fact: my middle name is Margarita.</p>
                     </li>
                </ul>
