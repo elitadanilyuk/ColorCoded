@@ -198,3 +198,8 @@ footer p {
 footer img {
   vertical-align: middle;
 }
+
+.table-1 {
+  width: 80%;
+  margin: 0px 40px;
+}
