@@ -5,15 +5,15 @@
 
     <body>
         <main class="main">
-            <div class="contents">
-                <form action="colorGenerator" target="" method="GET">
-                    <p>
-                        <label for="num"><b>Number of Rows/Columns:</b></label>
-                        <input type="number" id="num" name ="num" placeholder="Input" min="1" max="26" title="Must be between 1 and 26" required>
-                    </p>
+            <div class="contents-color-gen">
+                <form class="form-inputs" action="colorGenerator" target="" method="GET">
                     <p>
                         <label for="colors"><b>Number of Colors:</b></label>
                         <input type="number" id="colors" name="colors" placeholder="Input" min="1" max="10" title="Must be between 1 and 10" required>
+                    </p>
+                    <p>
+                        <label for="num"><b>Number of Rows/Columns:</b></label>
+                        <input type="number" id="num" name ="num" placeholder="Input" min="1" max="26" title="Must be between 1 and 26" required>
                     </p>
                     <input type="submit">
                 </form>
@@ -63,7 +63,7 @@
                     $numbers = range(1,26);
 	                $table = '';
 	                if (isset($_GET['num'])){ 
-		                $table .= '<table border="2">';
+		                $table .= '<table class="table-2" border="2">';
 		                for ($i = 0; $i < $_GET['num']+1; $i++) {
 			                $table .= '<tr>';
 			                for ($j = 0; $j < $_GET['num']+1; $j++) {
