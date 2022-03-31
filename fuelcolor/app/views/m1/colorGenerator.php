@@ -110,6 +110,7 @@
                             }
                             else {
                                 color[i].value = color_map.get(i);
+                                
                             }
                         });
                     }
