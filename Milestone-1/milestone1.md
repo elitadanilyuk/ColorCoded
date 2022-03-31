@@ -1,9 +1,9 @@
 # TEAM NAME - Milestone 1
 
 ## Pages
-- [ ] Home
+- [x] Home
   - [x] Modern Design
-  - [ ] Basic welcome information
+  - [x] Basic welcome information
   - [x] Useful links to get to the other pages on the site
     - [x] Home
     - [x] About
@@ -17,28 +17,28 @@
 
 ### Color Coordinate Generation
 - [ ] `GET`
-  - [ ] URL parameters asking for user input:
-    - [ ] rows/columns restrictions: `1 <= x <=26`
-    - [ ] number of colors: `1 <= x <= 10`
-  - [ ] validate user input
-    - [ ] If invalid: return the user to the form with meaningful error messages
+  - [x] URL parameters asking for user input:
+    - [x] rows/columns restrictions: `1 <= x <=26`
+    - [x] number of colors: `1 <= x <= 10`
+  - [x] validate user input
+    - [x] If invalid: return the user to the form with meaningful error messages
 - Successful validation:
-  - [ ] pass the parameters `(int rows/columns, int colors)` to the **SAME** controller/action
+  - [x] pass the parameters `(int rows/columns, int colors)` to the **SAME** controller/action
   - [ ] validate the parameters
     - [ ] if valid:
-      - [ ] return two tables
+      - [x] return two tables
       - [ ] have a 'print' button
-    - [ ] if invalid: render the form with error messages
+    - [x] if invalid: render the form with error messages
 
 #### Table requirements:
 - [ ] Table 1 (upper table):
-  - [ ] 2 col by `x` row (`x` = numColors param)
-  - [ ] no header row
-  - [ ] spans most of the width of the page
-  - [ ] right column: 80% table width
+  - [x] 2 col by `x` row (`x` = numColors param)
+  - [x] no header row
+  - [x] spans most of the width of the page
+  - [x] right column: 80% table width
   - [ ] left column
-     - [ ] 20% table width
-     - [ ] each cell is a drop-down with 10 color names (these should be ordered in an intuitive way for the user)
+     - [x] 20% table width
+     - [x] each cell is a drop-down with 10 color names (these should be ordered in an intuitive way for the user)
         - [ ] each cell has a different default set color
            - [ ] 1. red
            - [ ] 2. orange
@@ -53,17 +53,17 @@
          - [ ] No two drop-downs can select the same color at the same time. If this happens:
            - [ ] revert the most recently changed drop-down to the previous value selected
            - [ ] inform the user in a non-intrusive way (ie not an `alert()`)
-- [ ] Table 2 (lower table):
-  - [ ] (`n` + 1) by (`n` + 1) (`n` = row/column param)
+- [x] Table 2 (lower table):
+  - [x] (`n` + 1) by (`n` + 1) (`n` = row/column param)
     - **This table should always be square**
-  - [ ] upper leftmost cell is empty
-  - [ ] top row:
-    - [ ] leftmost cell is empty
-    - [ ] remaining cells accross the top are lettered with capital letters in alphabetical order from A - Z.
+  - [x] upper leftmost cell is empty
+  - [x] top row:
+    - [x] leftmost cell is empty
+    - [x] remaining cells accross the top are lettered with capital letters in alphabetical order from A - Z.
       - `Z` is used for the max size of 26
-  - [ ] leftmost column:
-    - [ ] top cell is empty
-    - [ ] remaining cells going down are numbered in order from 1 - 26
+  - [x] leftmost column:
+    - [x] top cell is empty
+    - [x] remaining cells going down are numbered in order from 1 - 26
 
 
 ### Pressing the print button
@@ -99,9 +99,9 @@
 ### Grading Breakdown
 - [x] Home Page as specified, site uses Fuel framework and templates (10 points)
 - [x] Member Biographies (10 points)
-- [ ] Color coordinate page uses GET/POST paradigm (10 points)
-- [ ] Parameters passed as controller parameters (10 points)
-- [ ] Parameter Validation (10 points)
+- [x] Color coordinate page uses GET/POST paradigm (10 points)
+- [x] Parameters passed as controller parameters (10 points)
+- [x] Parameter Validation (10 points)
 - [ ] Tables generated as specified (10 points)
 - [ ] Form controls work and obey selection restrictions (10 points)
 - [ ] Print View (10 points)
