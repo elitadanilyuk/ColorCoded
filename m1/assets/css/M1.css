@@ -199,7 +199,24 @@ footer img {
   vertical-align: middle;
 }
 
+.contents-color-gen {
+  margin-bottom: 60px;
+}
+
 .table-1 {
   width: 80%;
-  margin: 0px 40px;
+  margin: auto;
+}
+
+.table-2 {
+  width: 95%;
+  margin: auto;
+}
+
+.form-inputs {
+  text-align: center;
+}
+
+.form-inputs input {
+  width: 90px;
 }
