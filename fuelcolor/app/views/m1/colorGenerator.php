@@ -90,6 +90,30 @@
                 <?php
 	               echo $table;
                 ?>
+
+                <script>
+                    let color = document.querySelectorAll(".color_picker");
+                    // let color_map = new Map();
+                    for (let i = 0; i < color.length; i++) {
+                        // color_map.set(document.querySelector(".color_picker")[i].value, color[i]);
+                        // console.log(color_map);
+                        color[i].addEventListener("change", () => {
+                            for (let j = 0; j < color.length; j++) {
+                                if (color[i].value === color[i+1].value) {
+                                    console.log("color[i].value");
+                                    console.log(color[i].value);
+                                    console.log("color[i+1].value");
+                                    console.log(color[i+1].value);
+                                }
+                            }
+                        });
+                    }
+
+
+                    // document.querySelector(".color_picker").addEventListener("change", () => {
+                    //     console.log("lets go bitches");
+                    // });
+                </script>
                 
             </div>
         </main>
