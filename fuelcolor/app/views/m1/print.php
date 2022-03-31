@@ -30,7 +30,7 @@
                 <hr>
             </header>
             <div class="contents">
-                <form action="https://cs.colostate.edu:4444/~absarah/ColorCoded/m1/index.php/cc/print" target="" method="GET">
+                <form action="print" target="" method="GET">
                     <p>
                         <label for="num"><b>Number of Rows/Columns:</b></label>
                         <input type="number" id="num" name ="num" placeholder="Input" min="1" max="26" title="Must be between 1 and 26" required>
