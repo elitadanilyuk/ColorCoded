@@ -17,7 +17,7 @@
   font-family: Arial, Helvetica, serif;
   font-size: large;
 	padding: 0px;
-	width: 100%;
+	width: 100% !important;
   list-style-type: none;
   overflow: hidden;
   align-items: center;
@@ -56,7 +56,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	width: 100%;
-	max-width: 1500px;
+	/* max-width: 1500px; */
 	justify-content: space-around;
 	align-items: center;
 }
@@ -64,7 +64,7 @@
 .left-container {
 	display: flex;
 	flex-flow: row nowrap;
-	max-width: 1500px;
+	/* max-width: 1500px; */
 	justify-content: space-around;
 	align-items: center;
 }
