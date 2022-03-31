@@ -33,27 +33,36 @@ class Controller_cc extends Controller_Template
 		$data = array();
 		$row_col_num = "";
 		$color_num = "";
-		$submit = "";
 		$this->template->title= "Color Coordinate Generator";
 		$this->template->content= View::forge('m1/colorGenerator.php', $data);
 		$this->template->css= Asset::css("M1.css");
 
-		if (isset($_GET["num"]) && isset($_GET["colors"]) && isset($_GET["submit"])) {
-			$row_col_num = $_GET["num"];
-			$color_num = $_GET["colors"];
-			$submit = $_GET["submit"];
-			if (!is_numeric($row_col_num) || $row_col_num < 1 || $row_col_num > 26) {
-				echo ("Number of Rows/Columns must be between 1 and 26");
-				echo ("You entered: " . $row_col_num);
+		if (isset($_GET["num"]) && isset($_GET["colors"])) {
+			$row_col_num = 0;
+			$color_num = 0;
+			if (!is_numeric($_GET["num"]) || $_GET["num"] < 1 || $_GET["num"] > 26) {
+
+				echo '<script>alert("Number of Rows/Columns must be between 1 and 26!")</script>';
+				
+				$_GET['num'] = 0;
+				$_GET['num'] = 0;
+				$_GET['colors'] = 0;
+				$_GET['colors'] = 0;
 			}
-			if (!is_numeric($color_num) || $color_num < 1 || $color_num > 10) {
-				echo ("Number of Colors must be between 1 and 10");
-				echo ("You entered: " . $color_num);
-			}			
-			return new Response(View::forge('m1/print.php', $data));
+			else if (!is_numeric($_GET["colors"]) || $_GET["colors"] < 1 || $_GET["colors"] > 10) {
+
+				echo '<script>alert("Number of Colors must be between 1 and 10!")</script>';
+
+				$_GET['colors'] = 0;
+				$_GET['colors'] = 0;
+				$_GET['num'] = 0;
+				$_GET['num'] = 0;
+			}
+			else {
+				$this->template->row_col_num = $_GET["num"];
+				$this->template->color_num = $_GET["colors"];
+			}
 		}
-		$this->template->row_col_num = $row_col_num;
-		$this->template->color_num = $color_num;
 	}
 	
 	public function action_print() {

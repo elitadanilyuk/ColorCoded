@@ -22,7 +22,7 @@
 	                $table = '';
                     $color_choices = array('red', 'orange', 'yellow', 'green', 'blue', 'purple', 'grey', 'brown', 'black', 'teal');
 	                if (isset($_GET['colors'])){
-                            $table .= '<table border="2">';
+                            $table .= '<table class="table-1" border="2">';
                             for ($i = 0; $i < $_GET['colors']; $i++) {
                                 $table .= '<tr>';
                                 for ($j = 0; $j < 2; $j++) {
