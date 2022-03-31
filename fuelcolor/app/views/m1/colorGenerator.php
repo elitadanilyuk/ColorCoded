@@ -38,18 +38,18 @@
                                 $table .= '<tr>';
                                 for ($j = 0; $j < 2; $j++) {
                                     if($j % 2 == 0){
-                                        $table .= '<td width="20%"><select class="color_picker" name="color_picker" id="color_picker">
+                                        $table .= '<td width="20%"><select class="color_picker drop-down" name="color_picker" id="color_picker">
                                         <option value="blank"> </option>
-                                        <option value="red" style="background-color: red;">Red</option>
+                                        <option value="red" style="background-color: red; color:white;">Red</option>
                                         <option value="orange" style="background-color: orange;">Orange</option>
                                         <option value="yellow" style="background-color: yellow;">Yellow</option>
-                                        <option value="green" style="background-color: green;">Green</option>
-                                        <option value="blue" style="background-color: blue;">Blue</option>
-                                        <option value="purple" style="background-color: purple;">Purple</option>
-                                        <option value="grey" style="background-color: grey;">Grey</option>
-                                        <option value="brown" style="background-color: brown;">Brown</option>
-                                        <option value="black" style="background-color: black;">Black</option>
-                                        <option value="teal" style="background-color: teal;">Teal</option>
+                                        <option value="green" style="background-color: green; color:white;">Green</option>
+                                        <option value="teal" style="background-color: teal; color:white;">Teal</option>
+                                        <option value="blue" style="background-color: blue; color:white">Blue</option>
+                                        <option value="purple" style="background-color: purple; color:white;">Purple</option>
+                                        <option value="brown" style="background-color: brown; color:white;">Brown</option>
+                                        <option value="grey" style="background-color: grey; color:white;">Grey</option>
+                                        <option value="black" style="background-color: black; color:white; color:white;">Black</option>
                                         </select></td>';
                                     }
                                     else{
@@ -118,6 +118,7 @@
                             }
                             if (can_set_new_color) {
                                 color_map.set(i, color[i].value);
+                                document.querySelectorAll(".color_picker")[i].style.background = document.querySelectorAll(".drop-down")[i].value;
                             }
                             else {
                                 color[i].value = color_map.get(i);

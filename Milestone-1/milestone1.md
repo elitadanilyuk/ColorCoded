@@ -16,7 +16,7 @@
   - [ ] See Requirements below
 
 ### Color Coordinate Generation
-- [ ] `GET`
+- [x] `GET`
   - [x] URL parameters asking for user input:
     - [x] rows/columns restrictions: `1 <= x <=26`
     - [x] number of colors: `1 <= x <= 10`
@@ -31,12 +31,12 @@
     - [x] if invalid: render the form with error messages
 
 #### Table requirements:
-- [ ] Table 1 (upper table):
+- [x] Table 1 (upper table):
   - [x] 2 col by `x` row (`x` = numColors param)
   - [x] no header row
   - [x] spans most of the width of the page
   - [x] right column: 80% table width
-  - [ ] left column
+  - [x] left column
      - [x] 20% table width
      - [x] each cell is a drop-down with 10 color names (these should be ordered in an intuitive way for the user)
         - [ ] each cell has a different default set color
@@ -50,9 +50,9 @@
            - [ ] 8. brown
            - [ ] 9. grey
            - [ ] 10. black
-         - [ ] No two drop-downs can select the same color at the same time. If this happens:
-           - [ ] revert the most recently changed drop-down to the previous value selected
-           - [ ] inform the user in a non-intrusive way (ie not an `alert()`)
+         - [x] No two drop-downs can select the same color at the same time. If this happens:
+           - [x] revert the most recently changed drop-down to the previous value selected
+           - [x] inform the user in a non-intrusive way (ie not an `alert()`)
 - [x] Table 2 (lower table):
   - [x] (`n` + 1) by (`n` + 1) (`n` = row/column param)
     - **This table should always be square**
@@ -102,8 +102,8 @@
 - [x] Color coordinate page uses GET/POST paradigm (10 points)
 - [x] Parameters passed as controller parameters (10 points)
 - [x] Parameter Validation (10 points)
-- [ ] Tables generated as specified (10 points)
-- [ ] Form controls work and obey selection restrictions (10 points)
+- [x] Tables generated as specified (10 points)
+- [x] Form controls work and obey selection restrictions (10 points)
 - [ ] Print View (10 points)
 - [ ] * Site available on team member's local_html at the specified URL (10 points)
 - [ ] * Submission of team post-survey (10 points)
