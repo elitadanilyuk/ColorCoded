@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <link rel="icon" href="../../../m1/assets/img/company_small_icon.png">
     </head>
 
-    <body>
+    <body id="print">
         <main class="main">
+            <header>
+                <?php
+                    $logo = "<img src='../../../m1/assets/img/company_logo.jpg' alt='color coded company logo' style='max-height:50px;'>";
+                    echo "<div id='logo' >$logo</div>";
+                ?>
+            </header>
+
+                <script>
+                    document.getElementById("logo").style.display = "none";
+                </script>
             <div class="contents-color-gen">
                 <form class="form-inputs" action="colorGenerator" target="" method="GET">
                     <p>
@@ -27,7 +38,7 @@
                                 $table .= '<tr>';
                                 for ($j = 0; $j < 2; $j++) {
                                     if($j % 2 == 0){
-                                        $table .= '<td width="20%"><select class="color_picker" name="color_picker" id="color_picker">
+                                        $table .= '<td width="20%"><select class="color_picker drop-down" name="color_picker" id="color_picker">
                                         <option value="blank"> </option>
                                         <option value="red" style="background-color: red; color:white;">Red</option>
                                         <option value="orange" style="background-color: orange;">Orange</option>
@@ -55,7 +66,7 @@
                 <br/>
 
                 <?php
-	               echo $table;
+	               echo "<div id='colorTable'>$table</div>";
                 ?>
                 
                 <?php
@@ -88,7 +99,7 @@
                 <br/>
 
                 <?php
-	               echo $table;
+	               echo "<div id='alphTable'>$table</div>";
                 ?>
 
                 <script>
@@ -107,6 +118,7 @@
                             }
                             if (can_set_new_color) {
                                 color_map.set(i, color[i].value);
+                                document.querySelectorAll(".color_picker")[i].style.background = document.querySelectorAll(".drop-down")[i].value;
                             }
                             else {
                                 color[i].value = color_map.get(i);
@@ -122,11 +134,38 @@
                     }
                 </script>
 
-                <div id="snackbar">All colors must be different.</div>
+                <div id="snackbar" class="no-print">All colors must be different.</div>
                 
             </div>
+
+            <div id="print-button">
+                <form>
+                    <input type="button" onClick="printDiv()" value="Print" class="printable">
+                </form>
+            </div>   
+
         </main>
     </body>
+
+     
+
+    <script>
+        function printDiv() {
+
+            colorTable = document.getElementById('logo').innerHTML;
+            colorTable += document.getElementById('colorTable').innerHTML;
+            colorTable += document.getElementById('alphTable').innerHTML;
+
+            document.getElementById("logo").style.display = "none";
+            document.getElementById("print-button").style.display = "none";
+            
+            w = window.open();
+            w.document.write(colorTable);
+            w.print();
+            w.close();
+        }
+    </script>
+                   
 
 </html>
 

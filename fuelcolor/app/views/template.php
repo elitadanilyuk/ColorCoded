@@ -25,7 +25,7 @@
             <?php echo $content; ?>
         </div>
     </main>
-    <footer>
+    <footer class="no-print">
         <meta http-equiv=”last-modified” content=<span id='date-time'></sp``an>
         <p><img src="../../../m1/assets/img/company_large_icon.png" alt="color coded icon" style="max-height:20px"> Grace Fuller, Abby Williams, Maya Vitrano, Elita Danilyuk &copy; 2022 ColorCoded</p>
     </footer>
