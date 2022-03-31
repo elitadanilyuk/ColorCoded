@@ -17,18 +17,18 @@
 
 ### Color Coordinate Generation
 - [ ] `GET`
-  - [ ] URL parameters asking for user input:
-    - [ ] rows/columns restrictions: `1 <= x <=26`
-    - [ ] number of colors: `1 <= x <= 10`
-  - [ ] validate user input
-    - [ ] If invalid: return the user to the form with meaningful error messages
+  - [x] URL parameters asking for user input:
+    - [x] rows/columns restrictions: `1 <= x <=26`
+    - [x] number of colors: `1 <= x <= 10`
+  - [x] validate user input
+    - [x] If invalid: return the user to the form with meaningful error messages
 - Successful validation:
-  - [ ] pass the parameters `(int rows/columns, int colors)` to the **SAME** controller/action
+  - [x] pass the parameters `(int rows/columns, int colors)` to the **SAME** controller/action
   - [ ] validate the parameters
     - [ ] if valid:
-      - [ ] return two tables
+      - [x] return two tables
       - [ ] have a 'print' button
-    - [ ] if invalid: render the form with error messages
+    - [x] if invalid: render the form with error messages
 
 #### Table requirements:
 - [ ] Table 1 (upper table):
@@ -99,9 +99,9 @@
 ### Grading Breakdown
 - [x] Home Page as specified, site uses Fuel framework and templates (10 points)
 - [x] Member Biographies (10 points)
-- [ ] Color coordinate page uses GET/POST paradigm (10 points)
-- [ ] Parameters passed as controller parameters (10 points)
-- [ ] Parameter Validation (10 points)
+- [x] Color coordinate page uses GET/POST paradigm (10 points)
+- [x] Parameters passed as controller parameters (10 points)
+- [x] Parameter Validation (10 points)
 - [ ] Tables generated as specified (10 points)
 - [ ] Form controls work and obey selection restrictions (10 points)
 - [ ] Print View (10 points)
