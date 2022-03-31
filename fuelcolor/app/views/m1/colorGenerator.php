@@ -110,10 +110,19 @@
                             }
                             else {
                                 color[i].value = color_map.get(i);
+                                snackbar();
                             }
                         });
                     }
+
+                    function snackbar() {
+                        var x = document.getElementById("snackbar");
+                        x.className = "show";
+                        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                    }
                 </script>
+
+                <div id="snackbar">All colors must be different.</div>
                 
             </div>
         </main>
