@@ -191,7 +191,7 @@ footer p {
 
 #print-button {
   position: fixed;
-  bottom: -4px;
+  bottom: 15px;
   right: 3px;
 }
 
@@ -260,4 +260,13 @@ footer img {
 
 .form-inputs input {
   width: 90px;
+}
+
+@media print {
+  body {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
 }

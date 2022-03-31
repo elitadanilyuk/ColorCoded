@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <link rel="icon" href="../../../m1/assets/img/company_small_icon.png">
     </head>
 
-    <body>
+    <body id="print">
         <main class="main">
+            <header>
+                <?php
+                    $logo = "<img src='../../../m1/assets/img/company_logo.jpg' alt='color coded company logo' style='max-height:100px;'>";
+                    echo "<div id='logo' >$logo</div>";
+                ?>
+            </header>
+
+                <script>
+                    document.getElementById("logo").style.display = "none";
+                </script>
             <div class="contents-color-gen">
                 <form class="form-inputs" action="colorGenerator" target="" method="GET">
                     <p>
@@ -55,7 +66,7 @@
                 <br/>
 
                 <?php
-	               echo $table;
+	               echo "<div id='colorTable'>$table</div>";
                 ?>
                 
                 <?php
@@ -88,7 +99,7 @@
                 <br/>
 
                 <?php
-	               echo $table;
+	               echo "<div id='alphTable'>$table</div>";
                 ?>
 
                 <script>
@@ -125,8 +136,42 @@
                 <div id="snackbar">All colors must be different.</div>
                 
             </div>
+
+            <div id="print-button">
+                <form>
+                    <input type="button" onClick="printDiv('colorTable', 'alphTable', 'logo', 'print-button')" value="Print" class="printable">
+                </form>
+            </div>   
+
         </main>
     </body>
+
+     
+
+    <script>
+        function printDiv(colorTable, alphTable, companyLogo, button) {
+            //var printContents = document.getElementById(companyLogo).innerHTML;            
+            
+            colorTable = document.getElementById('logo').innerHTML;
+            colorTable += document.getElementById('colorTable').innerHTML;
+            colorTable += document.getElementById('alphTable').innerHTML;
+
+            document.getElementById("logo").style.display = "none";
+            document.getElementById("print-button").style.display = "none";
+            // printContents += document.getElementById(colorTable).innerHTML;
+            // printContents += document.getElementById(alphTable).innerHTML;           
+            
+            // console.log("here");
+
+            // window.print(document.getElementById(alphTable).innerHTML);
+            
+            w = window.open();
+            w.document.write(colorTable);
+            w.print();
+            w.close();
+        }
+    </script>
+                   
 
 </html>
 
