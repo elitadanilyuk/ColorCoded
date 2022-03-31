@@ -1,9 +1,9 @@
 # TEAM NAME - Milestone 1
 
 ## Pages
-- [ ] Home
+- [x] Home
   - [x] Modern Design
-  - [ ] Basic welcome information
+  - [x] Basic welcome information
   - [x] Useful links to get to the other pages on the site
     - [x] Home
     - [x] About
@@ -32,13 +32,13 @@
 
 #### Table requirements:
 - [ ] Table 1 (upper table):
-  - [ ] 2 col by `x` row (`x` = numColors param)
-  - [ ] no header row
-  - [ ] spans most of the width of the page
-  - [ ] right column: 80% table width
+  - [x] 2 col by `x` row (`x` = numColors param)
+  - [x] no header row
+  - [x] spans most of the width of the page
+  - [x] right column: 80% table width
   - [ ] left column
-     - [ ] 20% table width
-     - [ ] each cell is a drop-down with 10 color names (these should be ordered in an intuitive way for the user)
+     - [x] 20% table width
+     - [x] each cell is a drop-down with 10 color names (these should be ordered in an intuitive way for the user)
         - [ ] each cell has a different default set color
            - [ ] 1. red
            - [ ] 2. orange
@@ -53,17 +53,17 @@
          - [ ] No two drop-downs can select the same color at the same time. If this happens:
            - [ ] revert the most recently changed drop-down to the previous value selected
            - [ ] inform the user in a non-intrusive way (ie not an `alert()`)
-- [ ] Table 2 (lower table):
-  - [ ] (`n` + 1) by (`n` + 1) (`n` = row/column param)
+- [x] Table 2 (lower table):
+  - [x] (`n` + 1) by (`n` + 1) (`n` = row/column param)
     - **This table should always be square**
-  - [ ] upper leftmost cell is empty
-  - [ ] top row:
-    - [ ] leftmost cell is empty
-    - [ ] remaining cells accross the top are lettered with capital letters in alphabetical order from A - Z.
+  - [x] upper leftmost cell is empty
+  - [x] top row:
+    - [x] leftmost cell is empty
+    - [x] remaining cells accross the top are lettered with capital letters in alphabetical order from A - Z.
       - `Z` is used for the max size of 26
-  - [ ] leftmost column:
-    - [ ] top cell is empty
-    - [ ] remaining cells going down are numbered in order from 1 - 26
+  - [x] leftmost column:
+    - [x] top cell is empty
+    - [x] remaining cells going down are numbered in order from 1 - 26
 
 
 ### Pressing the print button
