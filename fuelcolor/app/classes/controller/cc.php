@@ -33,7 +33,6 @@ class Controller_cc extends Controller_Template
 		$data = array();
 		$row_col_num = "";
 		$color_num = "";
-		// $submit = "";
 		$this->template->title= "Color Coordinate Generator";
 		$this->template->content= View::forge('m1/colorGenerator.php', $data);
 		$this->template->css= Asset::css("M1.css");
