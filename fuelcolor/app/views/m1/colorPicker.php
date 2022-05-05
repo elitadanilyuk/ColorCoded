@@ -17,6 +17,17 @@
         <br>
         <h3>Current Available Colors:</h3>
         <!-- ADD DATABASE OF COLORS HERE -->
+        <?php 
+            // $query = DB::select()->from("colors")->execute()->as_array();
+            // // print_r($query);
+            // $colors = array();
+            // foreach ($query as $color) {
+            //     array_push($colors, $query['color']);
+            //     echo $colors['color'];
+            // }
+
+            // // echo $colors;
+        ?>
     </body>
 
     <footer></footer>

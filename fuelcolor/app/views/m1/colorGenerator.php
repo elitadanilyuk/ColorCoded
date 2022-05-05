@@ -112,7 +112,6 @@
 
                 <script>
                     let color = document.querySelectorAll(".color_picker");
-                    let color_map = <?php $color_map?>
                     let color_map = new Map();
                     for (let i = 0; i < color.length; i++) {
                         color_map.set(i, 'blank');
