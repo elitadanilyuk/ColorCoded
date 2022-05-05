@@ -3,13 +3,14 @@
   --cc-green: #6e986b;
   --cc-blue: #6596cd;
   --cc-grey: #636363;
+  --cc-darkGrey: rgb(61, 61, 61);
 }
 
 .page-header {
   margin-top: 50px;
   text-align: center;
   font-size: 45px;
-  color: rgb(61, 61, 61);
+  color: var(--cc-darkGrey);
 }
   
 .navbar {
@@ -151,7 +152,10 @@
   border-radius: 10px;
 }
 
-
+h3 {
+  text-align: center;
+  color: var(--cc-darkGrey);
+}
 
 body{
   background-color: #94abca;
@@ -244,7 +248,7 @@ footer img {
 
 table, th, tr {
   border-collapse: collapse;
-  border: 1px solid var(--cc-grey);
+  border: 1.5px solid var(--cc-grey);
 }
 
 .table-1 {
@@ -269,6 +273,10 @@ table, th, tr {
 
 .form-inputs input {
   width: 90px;
+}
+
+.colors-form #colors {
+  width: auto;
 }
 
 @media print {
