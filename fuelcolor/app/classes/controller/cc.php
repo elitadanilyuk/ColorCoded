@@ -22,10 +22,10 @@ class Controller_cc extends Controller_Template
 		$this->template->css= Asset::css("M1.css");
 	}
 
-	public function action_about() {
+	public function action_colorPicker() {
 		$data = array();
-		$this->template->title= "About the ColorCoded Team";
-		$this->template->content= View::forge('m1/about.php', $data);
+		$this->template->title= "Color Table";
+		$this->template->content= View::forge('m1/colorPicker.php', $data);
 		$this->template->css= Asset::css("M1.css");
 	}
 
@@ -75,5 +75,12 @@ class Controller_cc extends Controller_Template
 		$data['content'] = "Generated Tables";
 
 		return new Response(View::forge('m1/print.php', $data));
+	}
+
+	public function action_about() {
+		$data = array();
+		$this->template->title= "About the ColorCoded Team";
+		$this->template->content= View::forge('m1/about.php', $data);
+		$this->template->css= Asset::css("M1.css");
 	}
 }
