@@ -13,8 +13,9 @@
             <ul class="navbar nav-right">
                 <div class="right-container">
                     <li><?php echo "<a href='index'>Home</a>" ?></li>
+                    <li><?php echo "<a href='colorPicker'>Color Picker</a>" ?></li>
+                    <li><?php echo "<a href='colorGenerator'>Generator</a>" ?></li>
                     <li><?php echo "<a href='about'>About Us</a>" ?></li>
-                    <li><?php echo "<a href='colorGenerator'>Color Coordinate Generator</a>" ?></li>
                 </div>
             </ul>
         </div>
