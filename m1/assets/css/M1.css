@@ -245,6 +245,7 @@ footer img {
 .table-1 {
   width: 80%;
   margin: auto;
+  text-align: center;
 }
 
 .table-1 .drop-down {
@@ -254,6 +255,7 @@ footer img {
 .table-2 {
   width: 95%;
   margin: auto;
+  text-align: center;
 }
 
 .form-inputs {
