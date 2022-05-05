@@ -242,6 +242,11 @@ footer img {
   to {bottom: 0; opacity: 0;}
 }
 
+table, th, tr {
+  border-collapse: collapse;
+  border: 1px solid var(--cc-grey);
+}
+
 .table-1 {
   width: 80%;
   margin: auto;
@@ -249,7 +254,7 @@ footer img {
 }
 
 .table-1 .drop-down {
-  width: 100%;
+  width: 75%;
 }
 
 .table-2 {
