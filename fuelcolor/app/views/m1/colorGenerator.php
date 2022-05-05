@@ -112,7 +112,7 @@
 
                 <script>
                     let color = document.querySelectorAll(".color_picker");
-                    let color_map = <?php $color_map?>
+                    // let color_map = <?php $color_map;?>;
                     let color_map = new Map();
                     for (let i = 0; i < color.length; i++) {
                         color_map.set(i, 'blank');
@@ -127,7 +127,7 @@
                             }
                             if (can_set_new_color) {
                                 color_map.set(i, color[i].value);
-                                document.querySelectorAll(".color_picker")[i].style.background = document.querySelectorAll(".drop-down")[i].value;
+                                document.querySelectorAll(".color_picker")[i].style.background = document.querySelectorAll(".color_picker")[i].value;
                             }
                             else {
                                 color[i].value = color_map.get(i);
