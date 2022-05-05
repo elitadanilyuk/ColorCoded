@@ -3,7 +3,7 @@
     <head></head>
 
     <body>
-        <form class="color-inputs" action="colorPicker" target="" method="GET">
+        <form class="form-inputs colors-form" action="colorPicker" target="" method="GET">
             <p>
                 <label for="color-name"><b>Color Name: </b></label>
                 <input type="text" id="colors" name="colors" placeholder="Unique color name..." minlength="1" maxlength="10" title="Must be between 1 and 10" required>
@@ -14,9 +14,20 @@
             </p>
             <input type="submit" id="enter" name="enter"> 
         </form>
-
-        <p>Current Colors:</p>
+        <br>
+        <h3>Current Available Colors:</h3>
         <!-- ADD DATABASE OF COLORS HERE -->
+        <?php 
+            // $query = DB::select()->from("colors")->execute()->as_array();
+            // // print_r($query);
+            // $colors = array();
+            // foreach ($query as $color) {
+            //     array_push($colors, $query['color']);
+            //     echo $colors['color'];
+            // }
+
+            // // echo $colors;
+        ?>
     </body>
 
     <footer></footer>
