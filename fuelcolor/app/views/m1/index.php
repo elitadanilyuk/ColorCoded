@@ -8,8 +8,24 @@
             <header>
             </header>
             <div class="home-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at sagittis dui. Mauris risus felis, elementum vitae efficitur vitae, consectetur at augue. Suspendisse potenti. Cras pharetra et ipsum eget aliquet. Duis in lobortis velit. Aliquam maximus luctus urna. Vestibulum eget nibh id diam congue porttitor eget ut leo. Maecenas metus enim, ullamcorper sed orci quis, ullamcorper tristique purus. Curabitur volutpat, turpis vitae suscipit interdum, nisi lectus euismod quam, at vestibulum magna quam id lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin in gravida turpis, ut feugiat urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique semper rutrum.</p>
-                <p>Nam mattis dui at ante sodales laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce euismod neque urna, eu bibendum tellus porttitor vel. Cras id tortor pharetra ante congue pulvinar nec quis magna. Fusce blandit sodales tristique. Duis semper a augue vitae volutpat. Phasellus vehicula, ante quis eleifend rhoncus, augue massa sodales nisl, gravida iaculis enim lacus lobortis urna. Mauris tempor vel felis vitae elementum. Sed eu libero rhoncus, eleifend turpis ut, vestibulum risus. Aenean blandit arcu ligula, vitae molestie orci sodales at. Nam libero lacus, malesuada vel malesuada sit amet, vehicula ac ex.</p>
+                <h2>Our website is here to help you have some fun!</h2>
+                <p>Now the question is how do you do it, have fun?</p>
+                <p>You will be creating a 'Color by Coordinate' coloring activity!</p>
+                <p>Go to our 'Color Picker' tab. Here you can edit, add, and delete existing colors to 'color' with.</P>
+                <p>Next, go to our 'Generator' tab.<br>This is where the <i>real</i> fun starts!</p>
+                <p>
+                    <ul>In the 'Generator' page you will:
+                        <li>select the number of colors you want to color with</li>
+                        <li>select the grid size (up to 26)</li>
+                        <li>click 'Submit'</li>
+                        <p>Once the tables are viewable, select your desired colors in the upper table.</p>
+                        <li>click the button next to the desired color to activate it and color in the cells of the lower table
+                            <ul><li>as you color in the lower table, the coordinates will be added to the selected color in the upper table</li></ul>
+                        </li>
+                        <li>Once you're happy with your colorful image, click the 'Print' button.</li>
+                        <p>This will bring you to a printable 'color by coordinate' page so others can color it in by your created coordinates!</p>
+                    </ul>
+                </p>
             </div>
         </main>
     </body>

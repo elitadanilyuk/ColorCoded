@@ -22,10 +22,10 @@ class Controller_cc extends Controller_Template
 		$this->template->css= Asset::css("M1.css");
 	}
 
-	public function action_about() {
+	public function action_colorPicker() {
 		$data = array();
-		$this->template->title= "About the ColorCoded Team";
-		$this->template->content= View::forge('m1/about.php', $data);
+		$this->template->title= "Color Table";
+		$this->template->content= View::forge('m1/colorPicker.php', $data);
 		$this->template->css= Asset::css("M1.css");
 	}
 
@@ -33,13 +33,15 @@ class Controller_cc extends Controller_Template
 		$data = array();
 		$row_col_num = "";
 		$color_num = "";
+		$submit = "";
 		$this->template->title= "Color Coordinate Generator";
 		$this->template->content= View::forge('m1/colorGenerator.php', $data);
 		$this->template->css= Asset::css("M1.css");
 
-		if (isset($_GET["num"]) && isset($_GET["colors"])) {
+		if (isset($_GET["num"]) && isset($_GET["colors"]) && isset($_GET["submit"])) {
 			$row_col_num = 0;
 			$color_num = 0;
+			$submit = 0;
 			if (!is_numeric($_GET["num"]) || $_GET["num"] < 1 || $_GET["num"] > 26) {
 
 				echo '<script>alert("Number of Rows/Columns must be between 1 and 26!")</script>';
@@ -61,6 +63,8 @@ class Controller_cc extends Controller_Template
 			else {
 				$this->template->row_col_num = $_GET["num"];
 				$this->template->color_num = $_GET["colors"];
+				$this->template->submit = $_GET["submit"];
+				return new Response(View::forge('m1/print.php', $data));
 			}
 		}
 	}
@@ -71,5 +75,12 @@ class Controller_cc extends Controller_Template
 		$data['content'] = "Generated Tables";
 
 		return new Response(View::forge('m1/print.php', $data));
+	}
+
+	public function action_about() {
+		$data = array();
+		$this->template->title= "About the ColorCoded Team";
+		$this->template->content= View::forge('m1/about.php', $data);
+		$this->template->css= Asset::css("M1.css");
 	}
 }

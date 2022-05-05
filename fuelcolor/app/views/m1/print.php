@@ -30,29 +30,38 @@
                 <hr>
             </header>
             <div class="contents">
-                <form action="print" target="" method="GET">
-                    <p>
-                        <label for="num"><b>Number of Rows/Columns:</b></label>
-                        <input type="number" id="num" name ="num" placeholder="Input" min="1" max="26" title="Must be between 1 and 26" required>
-                    </p>
-                    <p>
-                        <label for="colors"><b>Number of Colors:</b></label>
-                        <input type="number" id="colors" name="colors" placeholder="Input" min="1" max="10" title="Must be between 1 and 10" required>
-                    </p>
-                    <input type="submit" id="enter" name="enter">
-                </form>
+               
                 <?php
 	                $crtable = '';
-	                if (isset($_GET['colors'])){
-		                $crtable .= '<table border="1">';
-		                for ($i = 0; $i < $_GET['colors']; $i++) {
-			                $crtable .= '<tr>';
-			                for ($j = 0; $j < 2; $j++) {
-				                $crtable .= '<td width="50">&nbsp;</td>';
-			                }
-			                $crtable .= '</tr>';
-		                }
-		                $crtable .= '</table>';
+                    $color_choices = array('red', 'orange', 'yellow', 'green', 'blue', 'purple', 'grey', 'brown', 'black', 'teal');
+                    if (isset($_GET['colors'])){
+                        $crtable .= '<table border="2">';
+                        for ($i = 0; $i < $_GET['colors']; $i++) {
+                            $crtable .= '<tr>';
+                            for ($j = 0; $j < 2; $j++) {
+                                if($j % 2 == 0){                                   
+                                    $crtable .= '<td width="20%"><select class="color_picker drop-down" name="color_picker" id="color_picker">
+                                    <option value="blank"> </option>
+                                    <option value="red" style="background-color: red; color:white;">Red</option>
+                                    <option value="orange" style="background-color: orange;">Orange</option>
+                                    <option value="yellow" style="background-color: yellow;">Yellow</option>
+                                    <option value="green" style="background-color: green; color:white;">Green</option>
+                                    <option value="teal" style="background-color: teal; color:white;">Teal</option>
+                                    <option value="blue" style="background-color: blue; color:white">Blue</option>
+                                    <option value="purple" style="background-color: purple; color:white;">Purple</option>
+                                    <option value="brown" style="background-color: brown; color:white;">Brown</option>
+                                    <option value="grey" style="background-color: grey; color:white;">Grey</option>
+                                    <option value="black" style="background-color: black; color:white; color:white;">Black</option>
+                                    </select></td>';
+                                }
+                                else{
+                                    $crtable .= '<td width="80%">&nbsp;</td>';
+                                }
+                                
+                            }
+                            $crtable .= '</tr>';
+                        }
+                        $crtable .= '</table>';
 	                }
                 ?>
                 <br/>
@@ -64,15 +73,15 @@
 
                 <?php
                     $alphabet = range('A', 'Z');
-	                $crtable = '';
+	                $num_table = '';
 	                if (isset($_GET['num'])){ 
-		                $crtable .= '<table border="1">';
+		                $num_table .= '<table border="1">';
 		                for ($i = 0; $i < $_GET['num']+1; $i++) {
-			                $crtable .= '<tr>';
+			                $num_table .= '<tr>';
 			                for ($j = 0; $j < $_GET['num']+1; $j++) {
-                                $crtable .= '<td width="50">&nbsp;</td>';
+                                $num_table .= '<td width="50">&nbsp;</td>';
                             }
-                            $crtable .= '</tr>';
+                            $num_table .= '</tr>';
                         }
 	                }
                 ?>
@@ -80,8 +89,42 @@
                 <br/>
 
                 <?php
-	               echo "<div id='alphTable'>$crtable</div>";
+	               echo "<div id='alphTable'>$num_table</div>";
                 ?>
+
+                <script>
+                    let color = document.querySelectorAll(".color_picker");
+                    let color_map = new Map();
+                    for (let i = 0; i < color.length; i++) {
+                        color_map.set(i, 'blank');
+                    }
+                    for (let i = 0; i < color.length; i++) {
+                        color[i].addEventListener("change", () => {
+                            let can_set_new_color = true;
+                            for (let j = 0; j < color_map.size; j++) {
+                                if (color_map.get(j) == color[i].value) {
+                                    can_set_new_color = false;
+                                }
+                            }
+                            if (can_set_new_color) {
+                                color_map.set(i, color[i].value);
+                                document.querySelectorAll(".color_picker")[i].style.background = document.querySelectorAll(".drop-down")[i].value;
+                            }
+                            else {
+                                color[i].value = color_map.get(i);
+                                snackbar();
+                            }
+                        });
+                    }
+
+                    function snackbar() {
+                        var x = document.getElementById("snackbar");
+                        x.className = "show";
+                        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                    }
+                </script>
+
+                <div id="snackbar" class="no-print">All colors must be different.</div>
 
             </div>
             
@@ -89,14 +132,7 @@
     </body>
 
     <footer>
-        
-        
-        <div id="print-button">
-            <form>
-                <input type="button" onClick="printDiv('colorTable', 'alphTable', 'logo', 'print-button')" value="Print" class="printable">
-            </form>
-        </div>            
-
+       
         <!-- <div id="print-button">
             <form>
                 <input type="button" onClick="printDiv('colorTable', 'alphTable')" value="Print">
