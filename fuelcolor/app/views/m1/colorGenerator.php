@@ -35,8 +35,10 @@
                 <?php
 	                $table = '';
                     $color_choices = array('red', 'orange', 'yellow', 'green', 'blue', 'purple', 'gray', 'brown', 'black', 'teal');
-	                //if (isset($_GET['colors'])){
+	                $colors = '';
+                    //if (isset($_GET['colors'])){
 					if (isset($_POST['colors'])){
+                            $colors = $_POST['colors'];
                             $table .= '<table class="table-1" border="2">';
                             //for ($i = 0; $i < $_GET['colors']; $i++) {
 							for ($i = 0; $i < $_POST['colors']; $i++) {
@@ -86,8 +88,10 @@
                     $alphabet = range('A', 'Z');
                     $numbers = range(1,26);
 	                $table = '';
+                    $num = '';
 	                //if (isset($_GET['num'])){ 
 					if (isset($_POST['num'])){ 
+                        $num = $_POST['num'];
 		                $table .= '<table id="table-2" class="table-2" border="2">';
 		                //for ($i = 0; $i < $_GET['num']+1; $i++) {
 						for ($i = 0; $i < $_POST['num']+1; $i++) {
@@ -123,9 +127,10 @@
                 ?>
 
                 <script>
+                    let color_map = new Map();
+                    
                     $(document).ready(function(){
                         let color = document.querySelectorAll(".color_picker");
-                        let color_map = new Map();
                         for (let i = 0; i < color.length; i++) {
                             color_map.set(i, 'blank');
                         }
@@ -161,13 +166,35 @@
                     });
                 </script>
 
+                <script>
+                    function sendToPrint() {
+                        //document.getElementsByName("color_info").value = "red";
+
+                        var printButton = document.getElementById('color_info');
+                        var inputColors = Array.from(color_map.values());
+                        console.log(inputColors);
+                        printButton.value = inputColors;
+                        console.log(printButton.value);
+
+                        // color_count = document.getElementById('crtable');
+                        // console.log(color_count);
+
+                        // var numVal = printButton.getAttribute("data-2");
+                        // printButton.numVal = document.getElementById('num_table');
+                        // console.log(printButton.numVal);
+                    }
+                </script>
+
                 <div id="snackbar" class="no-print">All colors must be different.</div>
                 
             </div>
 
             <div id="print-button">
-                <form>
-                    <input type="button" onClick="printDiv()" value="Print" class="printable">
+                <form action="https://www.cs.colostate.edu:4444/~absarah/ColorCoded/m1/index.php/cc/print" target="_blank" method="POST">
+                    <button type="submit" onclick="sendToPrint();" class="printable" id="color_info" name='color_info'>Print</button>
+                    
+                    <input type='hidden' id="colors" name='colors' value='<?php echo $colors;?>'/> 
+                    <input type='hidden' id="num" name='num' value='<?php echo $num;?>'/> 
                 </form>
             </div>   
 

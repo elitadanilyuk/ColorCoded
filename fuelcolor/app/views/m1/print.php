@@ -36,7 +36,7 @@
                     if (isset($_POST['colors']) && isset($_POST['color_info'])){
                         $crtable .= '<table border="2">';
 
-                        $temp = $_POST['color_info'];                        
+                        $temp = $_POST['color_info'];             
                         $color_choices = (array) explode(',', $temp);
 
                         for ($i = 0; $i < count($color_choices); $i++) {
