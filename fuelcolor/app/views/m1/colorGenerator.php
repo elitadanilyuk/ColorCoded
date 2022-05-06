@@ -110,11 +110,7 @@
             
                 <script>
                     let color = document.querySelectorAll(".color_picker");
-<<<<<<< HEAD
-                    let color_map = new Map();
-=======
                     var color_map = new Map();
->>>>>>> 136aebf... Sent color table values to Print View Page
                     for (let i = 0; i < color.length; i++) {
                         color_map.set(i, 'blank');
                     }
@@ -210,18 +206,4 @@
                     ?>'/> 
                 </form>
             </div>   -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
