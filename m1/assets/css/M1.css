@@ -290,6 +290,10 @@ table, th, tr {
   border: 1.5px solid var(--cc-grey);
 }
 
+.main-content {
+  text-align: left;
+}
+
 .table-1 {
   width: 80%;
   margin: auto;
