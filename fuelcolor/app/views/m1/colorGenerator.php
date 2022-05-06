@@ -43,6 +43,7 @@
                             //for ($i = 0; $i < $_GET['colors']; $i++) {
 							for ($i = 0; $i < $_POST['colors']; $i++) {
                                 $table .= '<tr>';
+                                $coordinates = [];
                                 for ($j = 0; $j < 2; $j++) {
                                     if($j % 2 == 0){
                                         $table .= '<td id="cell';
@@ -69,6 +70,7 @@
                                         $table .= '<td class="" id="activeList';
                                         $table .= $i;
                                         $table .= '"></td>';
+
                                     }
                                     
                                 }
@@ -168,21 +170,15 @@
 
                 <script>
                     function sendToPrint() {
-                        //document.getElementsByName("color_info").value = "red";
-
                         var printButton = document.getElementById('color_info');
                         var inputColors = Array.from(color_map.values());
-                        console.log(inputColors);
-                        printButton.value = inputColors;
+                        var colorInfo = inputColors.concat(activeList);
+                        console.log(color);
+                        colorInfo = colorInfo.concat(color);
+                        printButton.value = colorInfo;
                         console.log(printButton.value);
-
-                        // color_count = document.getElementById('crtable');
-                        // console.log(color_count);
-
-                        // var numVal = printButton.getAttribute("data-2");
-                        // printButton.numVal = document.getElementById('num_table');
-                        // console.log(printButton.numVal);
                     }
+
                 </script>
 
                 <div id="snackbar" class="no-print">All colors must be different.</div>
@@ -190,7 +186,7 @@
             </div>
 
             <div id="print-button">
-                <form action="https://www.cs.colostate.edu:4444/~absarah/ColorCoded/m1/index.php/cc/print" target="_blank" method="POST">
+                <form class="print-form" action="print" target="_blank" method="POST">
                     <button type="submit" onclick="sendToPrint();" class="printable" id="color_info" name='color_info'>Print</button>
                     
                     <input type='hidden' id="colors" name='colors' value='<?php echo $colors;?>'/> 

@@ -31,15 +31,30 @@
             <div class="contents">
                
                 <?php
+
                     $curr_color;
 	                $crtable = '';
                     if (isset($_POST['colors']) && isset($_POST['color_info'])){
                         $crtable .= '<table border="2">';
 
                         $temp = $_POST['color_info'];             
-                        $color_choices = (array) explode(',', $temp);
+                        $color_info = (array) explode(',', $temp);
 
-                        for ($i = 0; $i < count($color_choices); $i++) {
+                        $color_choices = array();
+                        $coordinates = array();
+                        $selected_color = array_pop($color_info);
+                        
+                        for ($i = 0; $i < count($color_info); $i++) {
+                            if (preg_match('/\d/', $color_info[$i])) {
+                                $coordinates[$i] = $color_info[$i];
+                            }
+                            else {
+                                $color_choices[$i] = $color_info[$i];
+                            }
+                        }                        
+                        $coordinates = array_values($coordinates);
+
+                        for ($i = 0; $i < $_POST['colors']; $i++) {
                             $curr_color = $color_choices[$i];
                             $crtable .= '<tr>';
                             for ($j = 0; $j < 2; $j++) {
@@ -47,8 +62,19 @@
                                     $crtable .= "<td width='20px'>$curr_color</td>";
                                 }
                                 else{
-                                    $crtable .= '<td width="80%">&nbsp;</td>';
-                                    // TODO : Coordinates
+                                    $crtable .= "<td width='80%'>";       
+
+                                        if ($curr_color == $selected_color) {
+                                            for ($k = 0; $k < count($coordinates); $k++) {
+                                                $crtable .= $coordinates[$k];
+                                                if ($k == count($coordinates) - 1) {
+                                                    break;
+                                                }                                                
+                                                $crtable .= ", ";
+                                            }
+                                        }
+
+                                    $crtable .= "</td>";
                                 }
                                 
                             }

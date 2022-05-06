@@ -1,23 +1,9 @@
-function printDiv() {
 
-    colorTable = document.getElementById('logo').innerHTML;
-    colorTable += document.getElementById('colorTable').innerHTML;
-    colorTable += document.getElementById('alphTable').innerHTML;
-
-    document.getElementById("logo").style.display = "none";
-    document.getElementById("print-button").style.display = "none";
-    
-    w = window.open();
-    w.document.write(colorTable);
-    w.print();
-    w.close();
-}
-
-
+var activeList = [];
+var color;
 
 $(document).ready(function(){
 
-    var currentColor;
     var currentId;
 
     $('.radioButton').each(function(){
@@ -30,9 +16,7 @@ $(document).ready(function(){
     });
 
     $('.colorCell').each(function() {
-        var color;
         var idNum;
-        var activeList = [];
         //console.log(this);
         $(this).click(function(){
             //Remove current classes
