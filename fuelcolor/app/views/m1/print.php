@@ -26,36 +26,29 @@
                     $logo = "<img src='../../../m1/assets/img/company_logo.jpg' alt='color coded company logo' style='max-height:100px;'>";
                     echo "<div id='logo'>$logo</div>";
                 ?>
-                <h1> <?php echo $title; ?> </h1>
-                <hr>
+                
             </header>
             <div class="contents">
                
                 <?php
+                    $curr_color;
 	                $crtable = '';
-                    $color_choices = array('red', 'orange', 'yellow', 'green', 'blue', 'purple', 'grey', 'brown', 'black', 'teal');
-                    if (isset($_GET['colors'])){
+                    if (isset($_POST['colors']) && isset($_POST['color_info'])){
                         $crtable .= '<table border="2">';
-                        for ($i = 0; $i < $_GET['colors']; $i++) {
+
+                        $temp = $_POST['color_info'];                        
+                        $color_choices = (array) explode(',', $temp);
+
+                        for ($i = 0; $i < count($color_choices); $i++) {
+                            $curr_color = $color_choices[$i];
                             $crtable .= '<tr>';
                             for ($j = 0; $j < 2; $j++) {
-                                if($j % 2 == 0){                                   
-                                    $crtable .= '<td width="20%"><select class="color_picker drop-down" name="color_picker" id="color_picker">
-                                    <option value="blank"> </option>
-                                    <option value="red" style="background-color: red; color:white;">Red</option>
-                                    <option value="orange" style="background-color: orange;">Orange</option>
-                                    <option value="yellow" style="background-color: yellow;">Yellow</option>
-                                    <option value="green" style="background-color: green; color:white;">Green</option>
-                                    <option value="teal" style="background-color: teal; color:white;">Teal</option>
-                                    <option value="blue" style="background-color: blue; color:white">Blue</option>
-                                    <option value="purple" style="background-color: purple; color:white;">Purple</option>
-                                    <option value="brown" style="background-color: brown; color:white;">Brown</option>
-                                    <option value="grey" style="background-color: grey; color:white;">Grey</option>
-                                    <option value="black" style="background-color: black; color:white; color:white;">Black</option>
-                                    </select></td>';
+                                if($j % 2 == 0){ 
+                                    $crtable .= "<td width='20px'>$curr_color</td>";
                                 }
                                 else{
                                     $crtable .= '<td width="80%">&nbsp;</td>';
+                                    // TODO : Coordinates
                                 }
                                 
                             }
@@ -74,11 +67,11 @@
                 <?php
                     $alphabet = range('A', 'Z');
 	                $num_table = '';
-	                if (isset($_GET['num'])){ 
+	                if (isset($_POST['num'])){ 
 		                $num_table .= '<table border="1">';
-		                for ($i = 0; $i < $_GET['num']+1; $i++) {
+		                for ($i = 0; $i < $_POST['num']+1; $i++) {
 			                $num_table .= '<tr>';
-			                for ($j = 0; $j < $_GET['num']+1; $j++) {
+			                for ($j = 0; $j < $_POST['num']+1; $j++) {
                                 $num_table .= '<td width="50">&nbsp;</td>';
                             }
                             $num_table .= '</tr>';
