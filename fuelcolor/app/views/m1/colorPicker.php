@@ -16,43 +16,6 @@
         </form>
 
         <p>Current Colors:</p>
-        <?php
-            $input_color_name = "";
-            $input_hexval = "";
-            if (isset($_GET['color-name']) && isset($_GET['hexval'])){
-                $input_color_name = $_GET['color-name'];
-                $input_hexval = $_GET['hexval'];
-
-                $insert = DB::insert('colors', array('color', 'hexval'));
-                $insert->values(array($input_color_name, $input_hexval));
-
-                try {
-                    $insert->execute();
-                } catch (Exception $e) {
-                    $lasterror = DB::error_info();
-                    // print_r($lasterror);
-                }
-            }
-
-            try {
-                $query = DB::select()->from("colors")->execute()->as_array();
-                print_r($query);
-                // $color_array = array();
-
-                for ($i = 0; $i <= 10; $i++) {
-                    echo $query[$i]['color'] + "<br>";
-                }
-
-                // foreach ($query as $color) {
-                //     array_push($color_array, $query[0]['color']);
-                // }
-
-            } catch (Exception $e) {
-                $lasterror = DB::error_info();
-                // print_r($lasterror);
-            }
-            
-        ?>
 
 
     </body>
@@ -60,3 +23,43 @@
     <footer></footer>
 
 </html>
+
+<?php
+    $input_color_name = "";
+    $input_hexval = "";
+    if (isset($_GET['color-name']) && isset($_GET['hexval'])){
+        $input_color_name = $_GET['color-name'];
+        $input_hexval = $_GET['hexval'];
+
+        $insert = DB::insert('colors', array('color', 'hexval'));
+        $insert->values(array($input_color_name, $input_hexval));
+
+        try {
+            $insert->execute();
+        } catch (Exception $e) {
+            $lasterror = DB::error_info();
+            // print_r($lasterror);
+        }
+    }
+
+    try {
+        $query = DB::select()->from("colors")->execute()->as_array();
+        // print_r($query);
+        // $color_array = array();
+
+        for ($i = 0; $i <= 10; $i++) {
+            echo $query[$i]['color'];
+            echo " - ";
+            echo $query[$i]['hexval'];
+            echo "<br>";
+        }
+
+        // foreach ($query as $color) {
+        //     array_push($color_array, $query[0]['color']);
+        // }
+
+    } catch (Exception $e) {
+        $lasterror = DB::error_info();
+        // print_r($lasterror);
+    }
+?>
