@@ -59,7 +59,7 @@
                             $crtable .= '<tr>';
                             for ($j = 0; $j < 2; $j++) {
                                 if($j % 2 == 0){ 
-                                    $crtable .= "<td width='20px'>$curr_color</td>";
+                                    $crtable .= "<td style='height'='10px', 'width'='10px'>$curr_color</td>";
                                 }
                                 else{
                                     $crtable .= "<td width='80%'>";       
@@ -91,14 +91,32 @@
                 ?>
 
                 <?php
+                    $numbers = range(1,26);
                     $alphabet = range('A', 'Z');
 	                $num_table = '';
 	                if (isset($_POST['num'])){ 
-		                $num_table .= '<table border="1">';
-		                for ($i = 0; $i < $_POST['num']+1; $i++) {
+		                $num_table .= '<table id="table-2" class="table-2" border="2" style="height"="10px", "width"="10px">';
+		                //for ($i = 0; $i < $_GET['num']+1; $i++) {
+						for ($i = 0; $i < $_POST['num']+1; $i++) {
 			                $num_table .= '<tr>';
-			                for ($j = 0; $j < $_POST['num']+1; $j++) {
-                                $num_table .= '<td width="50">&nbsp;</td>';
+			                //for ($j = 0; $j < $_GET['num']+1; $j++) {
+							for ($j = 0; $j < $_POST['num']+1; $j++) {
+                                if($i ==0 and $j == 0){
+                                    $num_table .= '<td>&nbsp;</td>';
+                                }
+                                else if($i == 0){
+                                    $num_table .= '<td>'.$alphabet[$j - 1].'</td>';
+                                }
+                                else if($j==0){
+                                    $num_table .= '<td>'.$numbers[$i-1].'</td>';
+                                }
+                                else{
+                                    $num_table .= '<td class="colorCell" id="cell';
+                                    $num_table .= $numbers[$i-1]; #id is not zero-based
+                                    $num_table .= $alphabet[$j-1];
+                                    $num_table .= '">&nbsp;</td>';
+
+                                }
                             }
                             $num_table .= '</tr>';
                         }
