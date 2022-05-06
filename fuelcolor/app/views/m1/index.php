@@ -31,3 +31,12 @@
     </body>
 
 </html>
+
+<?php
+
+    $db = DB::instance();
+    // $query = DB::query('select * from `colors`');
+    $color = DB::select()->from('colors')->execute();
+    echo DB::last_query();
+
+?>
