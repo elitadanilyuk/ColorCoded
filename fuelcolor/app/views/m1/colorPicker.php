@@ -3,7 +3,7 @@
     <head></head>
 
     <body>
-        <form class="color-inputs" action="colorPicker" target="" method="GET">
+        <form class="form-inputs colors-form" action="colorPicker" target="" method="GET">
             <p>
                 <label for="color-name"><b>Color Name: </b></label>
                 <input type="text" id="color-name" name="color-name" placeholder="Unique color name..." pattern="[a-zA-Z]*" title="Input must be text." required>
@@ -14,10 +14,7 @@
             </p>
             <input type="submit" id="enter" name="enter"> 
         </form>
-
         <p>Current Colors:</p>
-
-
     </body>
 
     <footer></footer>

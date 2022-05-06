@@ -3,13 +3,53 @@
   --cc-green: #6e986b;
   --cc-blue: #6596cd;
   --cc-grey: #636363;
+  --cc-darkGrey: rgb(61, 61, 61);
+}
+
+.active{
+  background-color: black;
+}
+
+.inactive{
+  background-color: white;
+}
+
+.red{
+  background-color: red;
+}
+.orange{
+  background-color: orange;
+}
+.yellow{
+  background-color: yellow;
+} 
+.green{
+  background-color: green;
+} 
+.blue{
+  background-color: blue;
+} 
+.purple{
+  background-color: purple;
+} 
+.gray{
+  background-color: gray;
+} 
+.brown{
+  background-color: brown;
+} 
+.black{
+  background-color: black;
+} 
+.teal{
+  background-color: teal;
 }
 
 .page-header {
   margin-top: 50px;
   text-align: center;
   font-size: 45px;
-  color: rgb(61, 61, 61);
+  color: var(--cc-darkGrey);
 }
   
 .navbar {
@@ -151,7 +191,10 @@
   border-radius: 10px;
 }
 
-
+h3 {
+  text-align: center;
+  color: var(--cc-darkGrey);
+}
 
 body{
   background-color: #94abca;
@@ -242,18 +285,25 @@ footer img {
   to {bottom: 0; opacity: 0;}
 }
 
+table, th, tr {
+  border-collapse: collapse;
+  border: 1.5px solid var(--cc-grey);
+}
+
 .table-1 {
   width: 80%;
   margin: auto;
+  text-align: center;
 }
 
 .table-1 .drop-down {
-  width: 100%;
+  width: 75%;
 }
 
 .table-2 {
   width: 95%;
   margin: auto;
+  text-align: center;
 }
 
 .form-inputs {
@@ -262,6 +312,10 @@ footer img {
 
 .form-inputs input {
   width: 90px;
+}
+
+.colors-form #colors {
+  width: auto;
 }
 
 @media print {
