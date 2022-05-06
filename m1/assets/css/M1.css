@@ -294,6 +294,10 @@ table, th, tr {
   text-align: left;
 }
 
+.center-colors {
+  text-align: center;
+}
+
 .table-1 {
   width: 80%;
   margin: auto;
