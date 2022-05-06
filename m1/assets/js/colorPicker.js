@@ -34,16 +34,9 @@ $(document).ready(function(){
             $(this).attr('class', "colorCell");
             $(this).toggleClass(color);
             //Set curr class = color_picks 
-            $("."+color).each(function(){
-                console.log(this);
-                // if(jQuery.inArray($(this).attr('id').substring(4), activeList)){
 
-                // }
-                // else{
-                //     activeList.push($(this).attr('id').substring(4) + ",");
-                // }
-                activeList.push($(this).attr('id').substring(4) + ",");
-            });
+            $("."+color);            
+            activeList.push($(this).attr('id').substring(4) + ", ");
             $('#activeList'+idNum).html(activeList);
         });
     });
