@@ -49,4 +49,12 @@ $(document).ready(function(){
         });
     });
     
+    let colorChoice = document.querySelector('.color_picker');
+
+    colorChoice.addEventListener('change', (event) => {
+        debugger;
+        for(i in document.querySelectorAll(event.value)){
+            console.log(i);
+        }
+    });
 });
