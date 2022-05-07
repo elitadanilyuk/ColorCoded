@@ -64,7 +64,6 @@
             ?>
             <br>
             <input type="submit" id="delete" name="delete" value="Delete">
-
         </div>
     </body>
 
