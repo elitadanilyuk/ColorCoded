@@ -41,6 +41,7 @@
                     // $color_array = array();
 
                     for ($i = 0; $i <= 10; $i++) {
+                        echo "<input type='checkbox' class='selectColor inact' id='selectColor'>";
                         echo $query[$i]['color'];
                         echo " - ";
                         echo $query[$i]['hexval'];
@@ -56,6 +57,9 @@
                     // print_r($lasterror);
                 }
             ?>
+            <br>
+            <input type="submit" id="delete" name="delete" value="Delete">
+
         </div>
     </body>
 
