@@ -8,6 +8,7 @@ $(document).ready(function(){
 
     $('.radioButton').each(function(){
         $(this).click(function(){
+            activeList = [];
             $('.act').each(function(){
                 $(this).addClass("inact").removeClass("act");
             });
@@ -36,8 +37,15 @@ $(document).ready(function(){
             //Set curr class = color_picks 
 
             $("."+color);            
-            activeList.push($(this).attr('id').substring(4) + ", ");
-            $('#activeList'+idNum).html(activeList);
+            // debugger;
+            console.log(activeList);
+            // if (activeList.include?)
+            // activeList.push($(this).attr('id').substring(4) + ", ");
+            str = $(this).attr('id').substring(4);
+            if (!activeList.includes(str)) {
+                str = activeList.push(str);
+            }
+            $('#activeList'+idNum).html(activeList.join(', '));
         });
     });
     
